@@ -37,6 +37,7 @@ rm -rf etrail.zip
 cd ..
 chmod -R 777 cs
 cd ..
+yum install screen whois -y
 clear
 ./gamecp restart
 cd
