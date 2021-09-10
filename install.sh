@@ -3,6 +3,7 @@
 hostname localhost
 yum install httpd sudo -y
 yum install mariadb-server -y
+service mariadb start
 mysql_secure_installation
 yum install nano -y
 cd /usr/local
@@ -12,15 +13,13 @@ rm -rf gcpcentos.zip
 chmod -R 755 gcp
 cd
 clear
-cd /etc/
-nano hosts
 echo “
 127.0.0.1 billing.gamecp.com billing1.gamecp.com billing2.gamecp.com
 89.163.132.56” >> /etc/hosts
 
 cd
 yum install epel-release -y
-sudo yum install proftpd
+sudo yum install proftpd -y
 sudo service proftpd restart
 
 yum install lsb -y
@@ -41,7 +40,5 @@ chmod -R 777 cs
 cd ..
 clear
 ./gamecp restart
-clear
 cd
-clear
 echo “Done”
