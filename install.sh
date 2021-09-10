@@ -11,18 +11,19 @@ wget http://89.163.132.56/assets/gcpcentos.zip
 unzip gcpcentos.zip
 rm -rf gcpcentos.zip
 chmod -R 755 gcp
-cd
+
 clear
 echo “
 127.0.0.1 billing.gamecp.com billing1.gamecp.com billing2.gamecp.com
 89.163.132.56” >> /etc/hosts
 
-cd
+
 yum install epel-release -y
 sudo yum install proftpd -y
 sudo service proftpd restart
 
 yum install lsb -y
+cd /gcp
 
 sh c1.sh
 
