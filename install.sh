@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 hostname localhost
 yum install httpd sudo -y
